@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 * {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
@@ -10,7 +9,8 @@
 /* Body */
 body {
   background-color: #ffffff;
-  color: #111;
+  color: #ed270e;
+  margin: 0%;
 }
 
 /* MENU */
@@ -27,7 +27,7 @@ body {
 
 .menu a {
   text-decoration: none;
-  color: #c0392b;
+  color: #ed270e;
   transition: 0.2s;
 }
 
@@ -37,27 +37,58 @@ body {
 
 /* INTRO */
 .intro {
-  margin-left: 3rem;
-  margin-top: 4rem;
+  margin: 3rem 4rem;
   font-size: 16px;
   line-height: 1.6;
   max-width: 30rem;
 }
 
-/* TOKIO + KANJIS BLOCK */
-.tokio-block {
-  position: relative;
-  margin-top: 60px;
+/* CONTENEDOR */
+.carousel {
+  width: 100%;
+  height: 60vh; /* mitad inferior */
+  position: fixed; /* se queda fijo en la parte inferior */
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+/* TODAS LAS IMÁGENES ENCIMA UNA DE OTRA */
+.slides img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none; /* ocultas por defecto */
+}
+
+.slides img.active {
+  display: block; /* solo la activa se ve */
+}
+
+/* BLOQUE TOKIO + KANJIS ENCIMA */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  pointer-events: none; /* no bloquea clics */
 }
 
 .kanjis {
   position: absolute;
   right: 80px;
-  top: 0;
+  top: 20px;
   display: flex;
   flex-direction: column;
   font-size: 90px;
-  color: #d8432b;
+  color: #ed270e;
   font-weight: bold;
   line-height: 0.9;
 }
@@ -67,24 +98,10 @@ body {
 }
 
 .tokio-title {
-  font-size: 140px;
+  font-size: 250px;
   font-weight: 900;
-  color: #d8432b;
+  color: #ed270e;
   margin: 0;
   padding-left: 40px;
-  position: relative;
   z-index: 2;
-}
-
-/* CARRUSEL */
-.carousel {
-  margin-top: -40px; /* solapa un poco como en el prototipo */
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel .slides img {
-  width: 100%;
-  height: auto;
-  display: block;
 }
