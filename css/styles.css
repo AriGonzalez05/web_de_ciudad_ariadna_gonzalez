@@ -50,7 +50,7 @@ body {
   position: fixed; /* se queda fijo en la parte inferior */
   bottom: 0;
   left: 0;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* TODAS LAS IMÁGENES ENCIMA UNA DE OTRA */
@@ -83,22 +83,31 @@ body {
 
 .kanjis {
   position: absolute;
-  right: 80px;
-  top: 20px;
+  bottom: 5rem; /* sobresale hacia arriba */
   display: flex;
   flex-direction: column;
-  font-size: 90px;
+  font-size: 160px;
   color: #ed270e;
   font-weight: bold;
   line-height: 0.9;
+  z-index: 3;
 }
 
 .kanjis span {
   margin-bottom: 20px;
 }
 
+.kanjis.izquierda {
+  right: 16rem;
+}
+
+/* Posición derecha */
+.kanjis.derecha {
+  right: 3rem;
+}
+
 .tokio-title {
-  font-size: 250px;
+  font-size: 220px;
   font-weight: 900;
   color: #ed270e;
   margin: 0;
