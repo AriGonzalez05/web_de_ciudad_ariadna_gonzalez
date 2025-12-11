@@ -157,6 +157,13 @@ h4 {
   font-weight: 300;
   line-height: 1.6;
 }
+
+.place-image {
+  margin-left: 4rem;
+  margin-top: 0.2rem;
+  max-width: 16rem;
+}
+
 @media (max-width: 1023px) {
   .overlay {
     flex-direction: column;
