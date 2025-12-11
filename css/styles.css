@@ -40,7 +40,7 @@ h1 {
 }
 
 .menu a:hover {
-  opacity: 0.6;
+  font-weight: 700;
 }
 
 /* INTRO */
@@ -79,19 +79,19 @@ h1 {
 
 /* BLOQUE TOKIO + KANJIS ENCIMA */
 .overlay {
+  display: flex;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: space-around;
+  align-items: end;
   pointer-events: none; /* no bloquea clics */
 }
 
 .kanjis {
-  position: absolute;
+  position: relative;
   bottom: 5rem; /* sobresale hacia arriba */
   display: flex;
   flex-direction: column;
@@ -99,27 +99,26 @@ h1 {
   color: #ed270e;
   font-weight: bold;
   line-height: 0.9;
-  z-index: 3;
 }
 
+.kanjis-group {
+  display: flex;
+  align-items: end;
+}
+
+.tokio-title {
+  position: relative;
+  font-size: 220px;
+  font-weight: 900;
+  color: #ed270e;
+  margin: 3.5rem 0;
+}
 .kanjis span {
   margin-bottom: 20px;
 }
 
-.kanjis.izquierda {
-  right: 16rem;
-}
-
-/* Posición derecha */
-.kanjis.derecha {
-  right: 3rem;
-}
-
-.tokio-title {
-  font-size: 220px;
-  font-weight: 900;
-  color: #ed270e;
-  margin: 0;
-  padding-left: 40px;
-  z-index: 2;
+@media (max-width: 1023px) {
+  .overlay {
+    flex-direction: column;
+  }
 }
