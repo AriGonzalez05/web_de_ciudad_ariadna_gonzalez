@@ -123,7 +123,9 @@ h2 {
   font-weight: 600;
   margin: 1rem 4rem;
 }
-
+#accordion {
+  width: 100vw;
+}
 h3 {
   font-family: "Inter", sans-serif;
   font-size: 1.6rem;
@@ -137,12 +139,11 @@ h3 {
   flex-direction: column;
   align-items: flex-start; /* alinea a la izquierda */
   justify-content: flex-start; /* alinea arriba */
-  height: 100%; /* o el alto que necesites */
   margin-left: 4rem;
-  gap: 3rem;
+  gap: 4rem;
 }
 
-.lugar {
+.lugar-1 {
   border-top: #ed270e 1.5px solid;
   border-right: #ed270e 1.5px solid;
   display: flex;
@@ -150,6 +151,18 @@ h3 {
   gap: 4rem;
   padding-top: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.lugar-2 {
+  border-top: #ed270e 1.5px solid;
+  border-left: #ed270e 1.5px solid;
+  display: flex;
+  gap: 4rem;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+
+  justify-content: flex-end; /* alinea todo el contenido al borde derecho */
+  width: 100%; /* asegura que el contenedor ocupa todo el ancho */
 }
 
 h4 {
@@ -168,7 +181,7 @@ h4 {
 }
 
 .place-image {
-  max-width: 16rem;
+  max-width: 14rem;
 }
 
 @media (max-width: 1023px) {
