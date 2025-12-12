@@ -20,3 +20,8 @@ $(function () {
     heightStyle: "content",
   });
 });
+
+// script.js
+$(function () {
+  $("#draggable").draggable();
+});
