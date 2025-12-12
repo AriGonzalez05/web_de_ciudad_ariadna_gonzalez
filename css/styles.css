@@ -140,10 +140,14 @@ h3 {
   font-weight: 550;
   margin-bottom: 1.8rem;
   margin-left: 4rem;
+  padding-bottom: 0.5rem;
+  border-bottom: #ed270e 1.5px solid;
 }
 
 .places {
   margin-left: 4rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .lugar {
@@ -160,7 +164,7 @@ h3 {
 }
 h4 {
   font-size: 1.3rem;
-  font-weight: 200;
+  font-weight: 600;
   margin-top: 0.2rem;
   margin-bottom: 1rem;
 }
@@ -174,7 +178,7 @@ h4 {
 }
 
 .place-image {
-  max-width: 18rem;
+  max-width: 20rem;
 }
 
 @media (max-width: 1023px) {
