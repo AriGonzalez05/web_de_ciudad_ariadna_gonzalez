@@ -143,22 +143,21 @@ h3 {
 }
 
 .places {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start; /* alinea a la izquierda */
-  justify-content: flex-start; /* alinea arriba */
   margin-left: 4rem;
-  gap: 4rem;
 }
 
 .lugar {
-  gap: 4rem;
   padding-top: 1.5rem;
   padding-right: 1.5rem;
   display: flex;
   flex-direction: row;
 }
-
+.texto-lugar {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  max-width: 22rem;
+}
 h4 {
   font-size: 1.3rem;
   font-weight: 200;
@@ -175,7 +174,7 @@ h4 {
 }
 
 .place-image {
-  max-width: 22rem;
+  max-width: 18rem;
 }
 
 @media (max-width: 1023px) {

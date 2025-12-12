@@ -11,3 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
     images[index].classList.add("active");
   }, 500); // cambia cada 0.5s
 });
+
+// script.js
+$(function () {
+  $("#accordion").accordion({
+    collapsible: true,
+  });
+});
