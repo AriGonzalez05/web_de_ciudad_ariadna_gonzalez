@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tokio - Clima</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav class="menu">
+    <a href="index.html" class="home-link">東京</a>
+    <a href="visitas.html">VISITAS</a>
+    <a href="transporte.html">LOCALIZACIÓN Y TRANSPORTE</a>
+    <a href="clima.html" class="active">CLIMA</a>
+    <a href="consejos.html">CONSEJOS</a>
+  </nav>
+
+  <div class="cabecero">
+    <div class="texto-seccion">
+      <h2>CLIMA</h2>
+      <p class="description">El clima de Tokio es templado y cuenta con cuatro estaciones bien diferenciadas a lo largo del año. Los inviernos suelen ser fríos y secos, mientras que los veranos son cálidos y húmedos. Durante la primavera y el otoño, las temperaturas son más suaves y agradables, convirtiéndose en las épocas favoritas para visitar la ciudad.</p>
+      <p class="description">Las temperaturas en Tokio varían bastante según el mes, pasando de unos 5 °C en invierno hasta superar los 30 °C en verano. Además, entre junio y julio tiene lugar la temporada de lluvias, conocida en Japón como "tsuyu".</p>
+      <p class="description">Gracias a estos cambios estacionales, Tokio ofrece paisajes y ambientes completamente diferentes dependiendo de la época del año.</p>
+    </div>
+  </div>
+
+  <div class="chart-container" style="width: 80%; margin: 0 auto 4rem auto;">
+    <canvas id="climaChart"></canvas>
+  </div>
+
+  <div class="seccion-sakura">
+    <h3 style="border:none; color: #ed270e; font-size: 2.5rem; max-width: 600px; line-height: 1.1;">LA PRIMAVERA Y LA FLORACIÓN DEL SAKURA</h3>
+    <p class="description">La primavera es una de las estaciones más especiales en Tokio. Entre finales de marzo y comienzos de abril tiene lugar la floración de los cerezos, conocida como "sakura", uno de los símbolos más importantes de Japón.</p>
+    <p class="description">Durante estos días, parques, templos y calles se cubren de flores rosas y blancas, creando paisajes muy característicos de la cultura japonesa. Miles de personas celebran el "hanami", una tradición que consiste en reunirse bajo los cerezos para disfrutar de la naturaleza y del ambiente primaveral.</p>
+    <p class="description">Algunos de los lugares más famosos para contemplar la floración son: <strong>Parque Ueno, Parque Yoyogi y el Río Meguro.</strong></p>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
