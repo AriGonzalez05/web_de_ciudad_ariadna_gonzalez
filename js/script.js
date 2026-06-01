@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   
-  // --- 1. LÓGICA DEL CARRUSEL (Solo se ejecuta en el index) ---
+  //CARRUSEL
   const images = document.querySelectorAll(".slides img");
-  if (images.length > 0) { // Comprobamos que las imágenes existen
+  if (images.length > 0) {
     let index = 0;
     images[index].classList.add("active");
     setInterval(() => {
@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 500);
   }
 
-  // --- 2. GRÁFICO DE CLIMA (Solo se ejecuta en clima.html) ---
+  //GRÁFICO DE CLIMA
   const ctx = document.getElementById('climaChart');
-  if (ctx) { // Comprobamos que el canvas del gráfico existe
+  if (ctx) {
     new Chart(ctx, {
       type: 'line',
       data: {
@@ -23,20 +23,20 @@ document.addEventListener("DOMContentLoaded", () => {
           {
             label: 'Temperatura Media (°C)',
             data: [5, 6, 9, 14, 18, 21, 25, 26, 23, 18, 12, 8],
-            borderColor: '#ed270e', // Rojo del diseño
-            backgroundColor: 'rgba(237, 39, 14, 0.4)', // Fondo rojo semitransparente
+            borderColor: '#ed270e',
+            backgroundColor: 'rgba(237, 39, 14, 0.4)',
             borderWidth: 2,
             fill: true,
-            tension: 0.4 // Hace que la línea sea una curva (olita)
+            tension: 0.4
           },
           {
             label: 'Precipitaciones (mm)',
             data: [52, 56, 117, 124, 137, 167, 153, 168, 209, 197, 92, 51],
             borderColor: '#888888', // Gris
-            backgroundColor: 'rgba(136, 136, 136, 0.2)', // Fondo gris semitransparente
+            backgroundColor: 'rgba(136, 136, 136, 0.2)',
             borderWidth: 2,
             fill: true,
-            tension: 0.4 // Hace que la línea sea una curva (olita)
+            tension: 0.4
           }
         ]
       },
@@ -53,9 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// --- 3. LÓGICA DE JQUERY (Visitas y Transporte) ---
+//JQUERY
 $(function () {
-  // Acordeón (solo si existe en la página)
+  // Acordeón
   if ($("#accordion").length > 0) {
     $("#accordion").accordion({
       collapsible: true,
@@ -64,7 +64,7 @@ $(function () {
     });
   }
 
-  // Elemento arrastrable (solo si existe en la página)
+  // Elemento arrastrable
   if ($("#draggable").length > 0) {
     $("#draggable").draggable();
   }
