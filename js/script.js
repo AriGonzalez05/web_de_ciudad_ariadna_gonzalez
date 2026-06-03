@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
           {
             label: 'Precipitaciones (mm)',
             data: [52, 56, 117, 124, 137, 167, 153, 168, 209, 197, 92, 51],
-            borderColor: '#888888', // Gris
+            borderColor: '#888888',
             backgroundColor: 'rgba(136, 136, 136, 0.2)',
             borderWidth: 2,
             fill: true,

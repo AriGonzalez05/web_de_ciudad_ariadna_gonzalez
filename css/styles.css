@@ -1,23 +1,69 @@
+/* 1. IMPORTACIONES Y VARIABLES */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+/* 2. ESTILOS GLOBALES */
 * {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
   font-style: normal;
   font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
-  font-style: normal;
 }
 
 body {
   background-color: #ffffff;
-  color: #ed270e;
-  margin: 0%;
+  color: #ed270e; 
 }
 
-h1 {
+h1, h2, h3, h4 {
   font-family: "Inter", sans-serif;
 }
 
+h2 {
+  font-size: 7.4rem;
+  font-weight: 700;
+  margin: 0 4rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: 550;
+  margin-bottom: 1.8rem;
+  margin-left: 4rem;
+  padding-bottom: 0.5rem;
+  border-bottom: #ed270e 1.5px solid;
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.description, .content {
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.description {
+  margin: 0 4rem 3rem 4rem;
+  max-width: 50rem;
+}
+
+.content {
+  max-width: 36rem;
+  margin-top: 0.2rem;
+}
+
+.cabecero {
+  display: flex;
+  padding-bottom: 2rem;
+}
+
+/* 3. NAVEGACIÓN Y FOOTER */
 .menu {
   width: 100%;
   height: 7rem;
@@ -37,10 +83,38 @@ h1 {
   transition: 0.2s;
 }
 
-.menu a:hover {
+/* Hover y estado activo del menú */
+.menu a:hover, 
+.menu a.active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
   font-weight: 700;
 }
 
+.home-link {
+  font-size: 1.5rem !important;
+}
+
+.site-footer {
+  background-color: #403535;
+  text-align: center;
+  padding: 3rem 0;
+  margin-top: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-footer span {
+  color: #ed270e;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+}
+
+/* 4. HOME PAGE */
 .intro {
   margin: 3rem 4rem;
   font-size: 1rem;
@@ -55,7 +129,8 @@ h1 {
   position: fixed;
   bottom: 0;
   left: 0;
-  overflow: visible;
+  overflow: hidden;
+  z-index: -1;
 }
 
 .slides img {
@@ -72,7 +147,6 @@ h1 {
   display: block;
 }
 
-/* BLOQUE TOKIO + KANJIS ENCIMA */
 .overlay {
   display: flex;
   position: absolute;
@@ -81,8 +155,21 @@ h1 {
   width: 100%;
   height: 100%;
   justify-content: space-around;
-  align-items: end;
+  align-items: flex-end;
   pointer-events: none;
+}
+
+.tokio-title {
+  position: relative;
+  font-size: 220px;
+  font-weight: 900;
+  color: #ed270e;
+  margin: 3.5rem 0;
+}
+
+.kanjis-group {
+  display: flex;
+  align-items: flex-end;
 }
 
 .kanjis {
@@ -96,47 +183,13 @@ h1 {
   line-height: 0.9;
 }
 
-.kanjis-group {
-  display: flex;
-  align-items: end;
-}
-
-.tokio-title {
-  position: relative;
-  font-size: 220px;
-  font-weight: 900;
-  color: #ed270e;
-  margin: 3.5rem 0;
-}
 .kanjis span {
   margin-bottom: 20px;
 }
 
-h2 {
-  font-family: "Inter", sans-serif;
-  font-size: 7.4rem;
-  font-weight: 700;
-  margin: 0rem 4rem;
-}
-
-.description {
-  font-size: 1rem;
-  font-weight: 300;
-  margin: 0rem 4rem 3rem 4rem;
-  max-width: 50rem;
-  line-height: 1.6;
-}
+/* 5. PÁGINA VISITAS */
 #accordion {
   width: 100vw;
-}
-h3 {
-  font-family: "Inter", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 550;
-  margin-bottom: 1.8rem;
-  margin-left: 4rem;
-  padding-bottom: 0.5rem;
-  border-bottom: #ed270e 1.5px solid;
 }
 
 .places {
@@ -151,35 +204,89 @@ h3 {
   display: flex;
   flex-direction: row;
 }
+
 .texto-lugar {
   display: flex;
   flex-direction: column;
   padding-left: 1rem;
   max-width: 22rem;
 }
-h4 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-top: 0.2rem;
-  margin-bottom: 1rem;
-}
-
-.content {
-  max-width: 36rem;
-  margin-top: 0.2rem;
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 1.6;
-}
 
 .place-image {
   max-width: 20rem;
 }
 
-.cabecero {
+/* 6. PÁGINA TRANSPORTE */
+.seccion-localizacion {
   display: flex;
-  padding-bottom: 2rem;
+  margin: 0 4rem 4rem 4rem;
+  gap: 2rem;
+  align-items: center;
 }
+
+.loc-texto {
+  flex: 1;
+}
+
+.loc-mapa {
+  flex: 1;
+}
+
+.loc-mapa img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.seccion-transporte {
+  margin: 0 0 4rem 0;
+}
+
+.transporte-galeria {
+  display: flex;
+  margin: 2rem 4rem;
+  gap: 1.5rem;
+}
+
+.trans-item {
+  flex: 1;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  cursor: pointer;
+}
+
+.trans-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.trans-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ed270e;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.trans-item:hover img {
+  transform: scale(1.05);
+}
+
+.trans-item:hover .trans-overlay {
+  transform: translateY(0);
+}
+
 #draggable {
   margin-top: 3rem;
   width: 150px;
@@ -196,35 +303,41 @@ h4 {
   font-weight: 600;
 }
 
-@media (max-width: 1023px) {
-  .overlay {
-    flex-direction: column;
-  }
+/* 7. PÁGINA CLIMA */
+.seccion-galeria {
+  margin: 4rem 2rem 4rem 2rem !important;
+  max-width: none !important;
 }
 
-/* --- AJUSTES DE TEXTO Y MENÚ --- */
-.description, .content {
-  text-align: justify; /* Justificado según el briefing */
+.galeria-contenedor {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  width: 100%;
 }
 
-/* Hover y estado activo del menú */
-.menu a:hover, 
-.menu a.active {
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  text-decoration-thickness: 2px;
-  font-weight: 700;
+.galeria-item {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.home-link {
-  font-size: 1.5rem !important; /* Para que el kanji de inicio destaque un poco más */
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-/* --- CLASES PARA LA PÁGINA DE CONSEJOS --- */
+/* 8. PÁGINA CONSEJOS */
 .franja-imagen {
   width: 100%;
   height: 250px;
-  background-image: url('../media/carruselhome.jpg/TOKYO-6.jpg'); /* Imagen de los cerezos o la que prefieras */
+  /* Ruta a la imagen .webp de tu nuevo repo */
+  background-image: url('../media/carruselhome.jpg/TOKYO 6.webp'); 
   background-size: cover;
   background-position: center;
   margin: 2rem 0;
@@ -245,9 +358,47 @@ h4 {
   margin-bottom: 0.5rem;
 }
 
-/* --- MEDIA QUERIES (RESPONSIVE) --- */
+.con-imagen {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
 
-/* Tablet (hasta 1024px) */
+.consejo-texto {
+  flex: 1;
+}
+
+.consejo-img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.consejo-doble-img {
+  display: flex;
+  gap: 1rem;
+  width: 350px;
+}
+
+.consejo-doble-img img {
+  width: 50%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.consejo-img-grande {
+  width: 100%;
+  margin-top: 1rem;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/*9. MEDIA QUERIES (Responsive para Móvil y Tablet)*/
+
+/* TABLET */
 @media (max-width: 1024px) {
   .menu {
     padding: 2rem;
@@ -267,74 +418,55 @@ h4 {
     margin-right: 2rem;
   }
   
+  /* Ajustes Portada Tablet */
+  .overlay {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
   .kanjis {
     font-size: 100px;
-    bottom: 2rem;
+    bottom: auto;
   }
   
   .tokio-title {
     font-size: 140px;
   }
+
+  /* Ajustes Transporte Tablet */
+  .seccion-localizacion {
+    flex-direction: column;
+    margin: 0 2rem 2rem 2rem;
+  }
+  
+  .transporte-galeria {
+    flex-direction: column;
+    margin: 2rem;
+  }
+
+  /* Ajustes Galería Clima Tablet */
+  .galeria-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* Ajustes Consejos Tablet */
+  .con-imagen {
+    flex-direction: column;
+  }
+  
+  .consejo-img, .consejo-doble-img {
+    width: 100%;
+    margin-top: 1rem;
+  }
 }
 
-/* Móvil (hasta 768px) */
+/*  MÓVIL */
 @media (max-width: 768px) {
   .menu {
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem;
-  }
-  
-  .menu a {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  h2 {
-    font-size: 3.5rem;
-    margin: 0 1rem;
-  }
-  
-  .description, .consejos-lista {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  
-  h3 {
-    font-size: 1.3rem;
-    margin-left: 1rem;
-  }
-
-  .places {
-    margin-left: 1rem;
-    flex-direction: column;
-  }
-
-  .lugar {
-    flex-direction: column;
-    padding-right: 0;
-  }
-
-  .place-image {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .texto-lugar {
-    padding-left: 0;
-  }
-  
-  /* Ajustes específicos para la portada en móvil */
-  .kanjis {
-    font-size: 60px;
-  }
-  
-  .tokio-title {
-    font-size: 80px;
-    margin: 1.5rem 0;
-  }
-  
-  .chart-container {
-    width: 95% !important;
   }
 }
