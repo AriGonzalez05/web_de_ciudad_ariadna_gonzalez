@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>東京 · Localización y Transporte</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/localizacion.css" />
+</head>
+<body data-page="localizacion">
+
+  <nav id="mainNav"></nav>
+  <div id="mobileMenu" class="mobile-menu"></div>
+  <div id="overlayBg" class="overlay-bg"></div>
+
+  <main class="page-wrapper">
+
+    <div class="page-header">
+      <div class="page-header-left">
+        <h1 class="page-title">LOCALIZACIÓN Y TRANSPORTE</h1>
+      </div>
+      <div class="page-header-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Tokyo_districts_map_en.svg/600px-Tokyo_districts_map_en.svg.png"alt="Mapa distritos Tokio" />
+      </div>
+    </div>
+
+    <section class="loc-section">
+      <h2 class="section-subtitle">Localización</h2>
+      <p class="body-text">
+        Tokio es la capital de Japón y una de las ciudades más grandes y
+        avanzadas del mundo. Se encuentra en la isla principal de Honshu,
+        en la región de Kantō, al este del país. La ciudad combina
+        tecnología, tradición y una enorme red de transporte que conecta
+        todos sus barrios y alrededores.
+      </p>
+
+      <div class="map-container">
+        <iframe
+          title="Mapa de Tokio"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=139.5,35.5,139.9,35.8&layer=mapnik&marker=35.6762,139.6503"
+          loading="lazy">
+        </iframe>
+        <p class="map-caption">Tokio, Japón · 35°41′N 139°41′E</p>
+      </div>
+    </section>
+
+    <section class="loc-section transport-section">
+      <h2 class="section-subtitle">Transporte</h2>
+      <p class="body-text">
+        Moverse por Tokio es una experiencia única. La ciudad cuenta con uno
+        de los sistemas de transporte más avanzados y eficientes del mundo,
+        capaz de conectar millones de personas cada día de forma rápida,
+        segura y puntual.
+      </p>
+      <p class="body-text" style="margin-top:12px;">
+        Gracias a su enorme red de metro, trenes y autobuses, es posible
+        llegar prácticamente a cualquier punto de la ciudad en pocos minutos.
+      </p>
+
+      <div class="transport-cards">
+
+        <div class="transport-card" data-modal="metro">
+          <div class="transport-img">
+            <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=600&q=80" alt="Metro Tokio" />
+          </div>
+          <div class="transport-label">METRO</div>
+        </div>
+
+        <div class="transport-card" data-modal="trenes">
+          <div class="transport-img">
+            <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=600&q=80" alt="Shinkansen" />
+          </div>
+          <div class="transport-label">TRENES</div>
+        </div>
+
+        <div class="transport-card" data-modal="otros">
+          <div class="transport-img">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80" alt="Autobús Tokio" />
+          </div>
+          <div class="transport-label">OTROS</div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close" id="modalClose">✕</button>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer id="mainFooter"></footer>
+
+  <script src="js/components.js"></script>
+  <script src="js/localizacion.js"></script>
+</body>
+</html>
