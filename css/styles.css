@@ -113,7 +113,7 @@ nav {
 }
 
 .mobile-menu {
-  display: none;
+  display: flex;
   position: fixed;
   top: 0;
   right: 0;
