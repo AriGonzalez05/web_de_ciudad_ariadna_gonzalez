@@ -1,472 +1,306 @@
-/* 1. IMPORTACIONES Y VARIABLES */
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
-/* 2. ESTILOS GLOBALES */
-* {
-  padding: 0;
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&family=Inter:wght@400;700;900&display=swap');
+
+:root {
+  --rojo: #ed270e;
+  --blanco: #FFFFFF;
+  --footer-bg: #403535;
+  --negro: #111111;
+  --gris-claro: #f5f5f5;
+}
+
+*, *::before, *::after {
   box-sizing: border-box;
-  font-style: normal;
-  font-family: "Roboto Mono", monospace;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #ffffff;
-  color: #ed270e; 
-}
-
-h1, h2, h3, h4 {
-  font-family: "Inter", sans-serif;
-}
-
-h2 {
-  font-size: 7.4rem;
-  font-weight: 700;
-  margin: 0 4rem;
-}
-
-h3 {
-  font-size: 1.6rem;
-  font-weight: 550;
-  margin-bottom: 1.8rem;
-  margin-left: 4rem;
-  padding-bottom: 0.5rem;
-  border-bottom: #ed270e 1.5px solid;
-}
-
-h4 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-top: 0.2rem;
-  margin-bottom: 1rem;
-}
-
-.description, .content {
-  text-align: justify;
-  font-size: 1rem;
+  font-family: 'Roboto Mono', monospace;
   font-weight: 300;
-  line-height: 1.6;
+  background: var(--blanco);
+  color: var(--negro);
+  overflow-x: hidden;
 }
 
-.description {
-  margin: 0 4rem 3rem 4rem;
-  max-width: 50rem;
-}
-
-.content {
-  max-width: 36rem;
-  margin-top: 0.2rem;
-}
-
-.cabecero {
-  display: flex;
-  padding-bottom: 2rem;
-}
-
-/* 3. NAVEGACIÓN Y FOOTER */
-.menu {
-  width: 100%;
-  height: 7rem;
-  padding: 3rem 4rem;
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #ffffff;
-  color: #000000;
+  padding: 18px 48px;
+  background: var(--blanco);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-.menu a {
+.nav-logo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--rojo);
   text-decoration: none;
-  color: #ed270e;
-  font-size: 1.1rem;
-  font-weight: 300;
-  transition: 0.2s;
+  letter-spacing: -1px;
 }
 
-/* Hover y estado activo del menú */
-.menu a:hover, 
-.menu a.active {
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  text-decoration-thickness: 2px;
-  font-weight: 700;
-}
-
-.home-link {
-  font-size: 1.5rem !important;
-}
-
-.site-footer {
-  background-color: #403535;
-  text-align: center;
-  padding: 3rem 0;
-  margin-top: 4rem;
-  width: 100%;
+.nav-links {
   display: flex;
-  justify-content: center;
+  list-style: none;
+  gap: 40px;
   align-items: center;
 }
 
-.site-footer span {
-  color: #ed270e;
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: 0.5rem;
+.nav-links a {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--negro);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.25s;
 }
 
-/* 4. HOME PAGE */
-.intro {
-  margin: 3rem 4rem;
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 1.6;
-  max-width: 40rem;
-}
-
-.carousel {
-  width: 100%;
-  height: 60vh;
-  position: fixed;
+.nav-links a::after {
+  content: '';
+  position: absolute;
   bottom: 0;
   left: 0;
-  overflow: hidden;
-  z-index: -1;
+  width: 0;
+  height: 2px;
+  background: var(--rojo);
+  transition: width 0.3s ease;
 }
 
-.slides img {
-  position: absolute;
-  top: 0;
-  left: 0;
+.nav-links a:hover {
+  color: var(--rojo);
+}
+
+.nav-links a:hover::after {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+}
+
+.nav-links a.active {
+  color: var(--rojo);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
+}
+
+.hamburger {
   display: none;
-}
-
-.slides img.active {
-  display: block;
-}
-
-.overlay {
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  justify-content: space-around;
-  align-items: flex-end;
-  pointer-events: none;
-}
-
-.tokio-title {
-  position: relative;
-  font-size: 220px;
-  font-weight: 900;
-  color: #ed270e;
-  margin: 3.5rem 0;
-}
-
-.kanjis-group {
-  display: flex;
-  align-items: flex-end;
-}
-
-.kanjis {
-  position: relative;
-  bottom: 5rem;
-  display: flex;
   flex-direction: column;
-  font-size: 160px;
-  color: #ed270e;
-  font-weight: bold;
-  line-height: 0.9;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
 }
 
-.kanjis span {
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--negro);
+  transition: all 0.3s;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100vh;
+  background: var(--blanco);
+  z-index: 200;
+  padding: 30px 30px;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
 }
 
-/* 5. PÁGINA VISITAS */
-#accordion {
-  width: 100vw;
+.mobile-menu .nav-logo {
+  font-size: 1.2rem;
 }
 
-.places {
-  margin-left: 4rem;
-  display: flex;
-  flex-wrap: wrap;
+.close-menu {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--rojo);
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1;
 }
 
-.lugar {
-  padding-top: 1.5rem;
-  padding-right: 1.5rem;
-  display: flex;
-  flex-direction: row;
-}
-
-.texto-lugar {
+.mobile-menu ul {
+  list-style: none;
   display: flex;
   flex-direction: column;
-  padding-left: 1rem;
-  max-width: 22rem;
+  gap: 20px;
 }
 
-.place-image {
-  max-width: 20rem;
+.mobile-menu ul a {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--negro);
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
-/* 6. PÁGINA TRANSPORTE */
-.seccion-localizacion {
-  display: flex;
-  margin: 0 4rem 4rem 4rem;
-  gap: 2rem;
-  align-items: center;
+.mobile-menu ul a:hover,
+.mobile-menu ul a.active {
+  color: var(--rojo);
 }
 
-.loc-texto {
-  flex: 1;
+.overlay-bg {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 199;
 }
 
-.loc-mapa {
-  flex: 1;
-}
-
-.loc-mapa img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.seccion-transporte {
-  margin: 0 0 4rem 0;
-}
-
-.transporte-galeria {
-  display: flex;
-  margin: 2rem 4rem;
-  gap: 1.5rem;
-}
-
-.trans-item {
-  flex: 1;
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  aspect-ratio: 16/9;
-  cursor: pointer;
-}
-
-.trans-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.trans-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #ed270e;
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-size: 1.2rem;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-}
-
-.trans-item:hover img {
-  transform: scale(1.05);
-}
-
-.trans-item:hover .trans-overlay {
-  transform: translateY(0);
-}
-
-#draggable {
-  margin-top: 3rem;
-  width: 150px;
-  height: 150px;
-  padding: 0.5em;
-  background-color: #ed270e;
-  color: #ffffff;
-  border-radius: 8px;
-  cursor: move;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-}
-
-/* 7. PÁGINA CLIMA */
-.seccion-galeria {
-  margin: 4rem 2rem 4rem 2rem !important;
-  max-width: none !important;
-}
-
-.galeria-contenedor {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  width: 100%;
-}
-
-.galeria-item {
-  flex: 1;
-  overflow: hidden;
-  border-radius: 8px;
-  aspect-ratio: 1 / 1;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.galeria-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.overlay-bg.open {
   display: block;
 }
 
-/* 8. PÁGINA CONSEJOS */
-.franja-imagen {
-  width: 100%;
-  height: 250px;
-  /* Ruta a la imagen .webp de tu nuevo repo */
-  background-image: url('../media/carruselhome.jpg/TOKYO 6.webp'); 
-  background-size: cover;
-  background-position: center;
-  margin: 2rem 0;
-}
-
-.consejos-lista {
-  margin: 0 4rem 4rem 4rem;
-  max-width: 50rem;
-}
-
-.consejo-item {
-  margin-bottom: 2rem;
-}
-
-.consejo-item h4 {
-  color: #ed270e;
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-}
-
-.con-imagen {
+footer {
+  background: var(--footer-bg);
+  color: var(--blanco);
+  padding: 48px;
   display: flex;
-  gap: 2rem;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 80px;
 }
 
-.consejo-texto {
-  flex: 1;
+.footer-kanji {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  color: var(--rojo);
+  opacity: 0.8;
+  letter-spacing: 8px;
 }
 
-.consejo-img {
-  width: 250px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
+.footer-logo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--blanco);
 }
 
-.consejo-doble-img {
+.footer-links {
   display: flex;
-  gap: 1rem;
-  width: 350px;
+  gap: 32px;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.consejo-doble-img img {
-  width: 50%;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 8px;
+.footer-links a {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
-.consejo-img-grande {
-  width: 100%;
-  margin-top: 1rem;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 8px;
+.footer-links a:hover {
+  color: var(--rojo);
 }
 
-/*9. MEDIA QUERIES (Responsive para Móvil y Tablet)*/
+.footer-divider {
+  width: 60px;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+}
 
-/* TABLET */
-@media (max-width: 1024px) {
-  .menu {
-    padding: 2rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-    height: auto;
-    justify-content: center;
-  }
-  
-  h2 {
-    font-size: 5rem;
-    margin: 0 2rem;
-  }
-  
-  .description, .consejos-lista {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-  
-  /* Ajustes Portada Tablet */
-  .overlay {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .kanjis {
-    font-size: 100px;
-    bottom: auto;
-  }
-  
-  .tokio-title {
-    font-size: 140px;
-  }
+.footer-copy {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.35);
+  text-align: center;
+}
 
-  /* Ajustes Transporte Tablet */
-  .seccion-localizacion {
-    flex-direction: column;
-    margin: 0 2rem 2rem 2rem;
-  }
-  
-  .transporte-galeria {
-    flex-direction: column;
-    margin: 2rem;
-  }
 
-  /* Ajustes Galería Clima Tablet */
-  .galeria-contenedor {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+.page-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: var(--rojo);
+  line-height: 0.95;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--rojo);
+  margin-bottom: 16px;
+}
+
+.body-text {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+@media (max-width: 900px) {
+  nav {
+    padding: 16px 28px;
   }
 
-  /* Ajustes Consejos Tablet */
-  .con-imagen {
-    flex-direction: column;
+  .nav-links {
+    display: none;
   }
-  
-  .consejo-img, .consejo-doble-img {
-    width: 100%;
-    margin-top: 1rem;
+
+  .hamburger {
+    display: flex;
   }
 }
 
-/*  MÓVIL */
-@media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 600px) {
+  nav {
+    padding: 14px 20px;
+  }
+
+  footer {
+    padding: 36px 24px;
   }
 }

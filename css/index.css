@@ -1,0 +1,173 @@
+/* ============================================
+   HOMEPAGE — index.css
+   ============================================ */
+
+/* HERO CONTAINER */
+.hero {
+  position: relative;
+  min-height: calc(100vh - 62px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── Mitad superior: intro + kanjis ── */
+.hero-intro {
+  padding: 40px 48px 24px;
+  max-width: 55%;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-intro .body-text {
+  font-size: 0.78rem;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.hero-tagline {
+  margin-top: 12px;
+  font-style: italic;
+}
+
+/* Kanjis decorativos esquina superior derecha */
+.hero-kanjis {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.hero-kanjis span {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  color: var(--rojo);
+  line-height: 1;
+  opacity: 0.85;
+  animation: fadeInKanji 0.8s ease forwards;
+  animation-delay: calc(var(--i, 0) * 0.15s);
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+.hero-kanjis span:nth-child(1) { --i: 1; }
+.hero-kanjis span:nth-child(2) { --i: 2; }
+.hero-kanjis span:nth-child(3) { --i: 3; }
+.hero-kanjis span:nth-child(4) { --i: 4; }
+.hero-kanjis span:nth-child(5) { --i: 5; }
+
+@keyframes fadeInKanji {
+  to { transform: translateX(0); opacity: 0.85; }
+}
+
+/* ── Carrusel ── */
+.hero-carousel {
+  position: relative;
+  flex: 1;
+  min-height: 340px;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-track img {
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* TOKIO overlay */
+.hero-title-overlay {
+  position: absolute;
+  bottom: 28px;
+  left: 40px;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.hero-tokio {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: clamp(4rem, 10vw, 9rem);
+  color: var(--rojo);
+  letter-spacing: -4px;
+  line-height: 1;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.15);
+}
+
+/* Kanjis del carrusel (derecha) */
+.carousel-kanjis {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.carousel-kanjis span {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.5rem, 5.5vw, 5rem);
+  color: var(--rojo);
+  line-height: 1;
+  opacity: 0.7;
+}
+
+/* ============================================
+   RESPONSIVE — HOMEPAGE
+   ============================================ */
+
+@media (max-width: 900px) {
+  .hero-intro {
+    max-width: 70%;
+    padding: 30px 28px 20px;
+  }
+
+  .hero-kanjis span {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-intro {
+    max-width: 100%;
+    padding: 24px 20px 16px;
+  }
+
+  .hero-kanjis {
+    right: 0;
+  }
+
+  .hero-kanjis span {
+    font-size: 2.2rem;
+  }
+
+  .hero-carousel {
+    min-height: 260px;
+  }
+
+  .hero-tokio {
+    font-size: 3.5rem;
+    letter-spacing: -2px;
+  }
+
+  .carousel-kanjis span {
+    font-size: 2rem;
+  }
+}
