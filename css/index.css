@@ -1,8 +1,4 @@
-/* ============================================
-   HOMEPAGE — index.css
-   ============================================ */
 
-/* HERO CONTAINER */
 .hero {
   position: relative;
   min-height: calc(100vh - 62px);
@@ -11,13 +7,6 @@
   overflow: hidden;
 }
 
-/* ── Mitad superior: intro + kanjis ── */
-.hero-intro {
-  padding: 40px 48px 24px;
-  max-width: 55%;
-  z-index: 2;
-  position: relative;
-}
 
 .hero-intro .body-text {
   font-size: 0.78rem;
@@ -30,7 +19,6 @@
   font-style: italic;
 }
 
-/* Kanjis decorativos esquina superior derecha */
 .hero-kanjis {
   position: absolute;
   top: 0;
@@ -65,7 +53,6 @@
   to { transform: translateX(0); opacity: 0.85; }
 }
 
-/* ── Carrusel ── */
 .hero-carousel {
   position: relative;
   flex: 1;
@@ -89,7 +76,6 @@
   transition: opacity 0.2s ease;
 }
 
-/* TOKIO overlay */
 .hero-title-overlay {
   position: absolute;
   bottom: 28px;
@@ -108,7 +94,6 @@
   text-shadow: 2px 2px 0 rgba(0,0,0,0.15);
 }
 
-/* Kanjis del carrusel (derecha) */
 .carousel-kanjis {
   position: absolute;
   top: 0;
@@ -129,9 +114,6 @@
   opacity: 0.7;
 }
 
-/* ============================================
-   RESPONSIVE — HOMEPAGE
-   ============================================ */
 
 @media (max-width: 900px) {
   .hero-intro {
