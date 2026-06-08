@@ -1,91 +1,161 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tokio - Consejos</title>
+  <title>東京 · Consejos</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/consejos.css" />
 </head>
-<body>
-  <nav class="menu">
-    <a href="index.html" class="home-link">東京</a>
-    <a href="visitas.html">VISITAS</a>
-    <a href="transporte.html">LOCALIZACIÓN Y TRANSPORTE</a>
-    <a href="clima.html">CLIMA</a>
-    <a href="consejos.html" class="active">CONSEJOS</a>
-  </nav>
+<body data-page="consejos">
 
-  <div class="cabecero">
-    <div class="texto-seccion">
-      <h2>CONSEJOS</h2>
-      <p class="description">Viajar a Tokio puede ser una experiencia increíble, especialmente para quienes visitan Japón por primera vez. La ciudad combina tradición y tecnología, ofreciendo una cultura muy diferente a la occidental. Por eso, conocer algunos consejos básicos puede hacer que el viaje sea mucho más cómodo y sencillo.</p>
-    </div>
-  </div>
+  <nav id="mainNav"></nav>
+  <div id="mobileMenu" class="mobile-menu"></div>
+  <div id="overlayBg" class="overlay-bg"></div>
 
-  <div class="franja-imagen"></div>
+  <main class="page-wrapper">
 
-  <section class="consejos-lista">
-    <div class="consejo-item">
-      <div class="consejo-texto">
-        <h4>1. Contrata un seguro de viaje.</h4>
-        <p class="content">El sistema sanitario japonés es excelente, pero los costes médicos para turistas pueden ser muy elevados. Por eso es muy importante viajar con un seguro que cubra asistencia médica, hospitalización, accidentes y posibles imprevistos...</p>
+    <!-- CABECERA -->
+    <div class="consejos-header">
+      <div class="consejos-header-left">
+        <h1 class="page-title">CONSEJOS</h1>
+        <p class="body-text">
+          Viajar a Tokio puede ser una experiencia increíble, especialmente
+          para quienes visitan Japón por primera vez. La ciudad combina
+          tradición y tecnología, ofreciendo una cultura muy diferente a la
+          occidental. Por eso, conocer algunos consejos básicos puede hacer
+          que el viaje sea mucho más cómodo y sencillo.
+        </p>
+      </div>
+      <div class="consejos-kanjis" aria-hidden="true">
+        <span>東</span>
+        <span>京</span>
+        <span>東</span>
+        <span>東</span>
+        <span>京</span>
       </div>
     </div>
 
-    <div class="consejo-item con-imagen">
-      <div class="consejo-texto">
-        <h4>2. Familiarízate con el transporte.</h4>
-        <p class="content">El metro y los trenes son la forma principal de moverse. Su red es inmensa y eficiente. Aplicaciones como Google Maps facilitan mucho la orientación.</p>
-      </div>
-      <img src="media/consejos/img_01.png" alt="Mapa transporte" class="consejo-img">
+    <!-- FRANJA DIVISORIA ROJA -->
+    <div class="red-strip">
+      <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1400&q=70" alt="Tokio" />
+      <div class="red-strip-overlay"></div>
     </div>
 
-    <div class="consejo-item con-imagen">
-      <div class="consejo-texto">
-        <h4>3. Lleva siempre efectivo.</h4>
-        <p class="content">Aunque Tokio es una ciudad moderna, muchos restaurantes pequeños y templos siguen funcionando principalmente con dinero en efectivo.</p>
-      </div>
-      <img src="media/consejos/JPY_Banknotes.png" alt="Yenes" class="consejo-img" style="object-fit: contain;">
-    </div>
-    
-    <div class="consejo-item con-imagen">
-      <div class="consejo-texto">
-        <h4>4. Elige bien tu alojamiento.</h4>
-        <p class="content">Alojarse en barrios bien conectados como Shinjuku, Shibuya o Asakusa puede marcar una gran diferencia en los tiempos de desplazamiento.</p>
-      </div>
-      <div class="consejo-doble-img">
-         <img src="media/consejos/shinjuku-japonismo.webp" alt="Shinjuku">
-         <img src="media/consejos/asakusa-28.png" alt="Asakusa">
-      </div>
-    </div>
+    <!-- LISTA DE CONSEJOS -->
+    <div class="tips-list">
 
-    <div class="consejo-item">
-      <div class="consejo-texto">
-        <h4>5. Respeta las normas sociales y culturales.</h4>
-        <p class="content">En Japón el comportamiento en público es muy importante. Es habitual hacer cola para todo y evitar hablar en voz alta en el transporte público.</p>
-      </div>
-    </div>
+      <!-- 1 -->
+      <article class="tip-item tip-text-only">
+        <h2 class="tip-number section-subtitle">1. Contrata un seguro de viaje.</h2>
+        <p class="body-text">
+          El sistema sanitario japonés es excelente, pero los costes médicos para turistas pueden
+          ser muy elevados. Por eso, es muy importante viajar con un seguro que cubra asistencia
+          médica, hospitalización, accidentes y posibles imprevistos como cancelaciones o pérdida
+          de equipaje. Es uno de esos gastos que realmente merece la pena tener antes de viajar.
+        </p>
+      </article>
 
-    <div class="consejo-item con-imagen">
-      <div class="consejo-texto">
-        <h4>6. Prueba la gastronomía local.</h4>
-        <p class="content">Tokio es considerada una de las mejores ciudades del mundo para comer. Atrévete a probar especialidades locales más allá del sushi.</p>
-      </div>
-      <img src="media/consejos/gastronomia.png" alt="Gastronomía" class="consejo-img">
-    </div>
+      <!-- 2 -->
+      <article class="tip-item tip-with-img">
+        <div class="tip-content">
+          <h2 class="tip-number section-subtitle">2. Familiarízate con el transporte.</h2>
+          <p class="body-text">
+            El metro y los trenes son la forma principal de moverse por Tokio y
+            funcionan de manera muy puntual y eficiente. Sin embargo, la red es
+            muy extensa, por lo que al principio puede parecer complicada. Usar
+            aplicaciones como Google Maps o mapas offline facilita mucho la
+            orientación y la planificación de rutas.
+          </p>
+        </div>
+        <div class="tip-img">
+          <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&q=80" alt="Metro Tokio" />
+        </div>
+      </article>
 
-    <div class="consejo-item con-imagen">
-      <div class="consejo-texto">
-        <h4>7. Organiza el viaje, pero deja espacio para improvisar.</h4>
-        <p class="content">Es recomendable tener un itinerario básico, pero muchos de los mejores momentos aparecen simplemente explorando los barrios sin rumbo fijo.</p>
-      </div>
-      <img src="media/consejos/tokio-skyline-monte-fuji_98.webp" alt="Skyline" class="consejo-img-grande">
-    </div>
-  </section>
+      <!-- 3 -->
+      <article class="tip-item tip-with-img">
+        <div class="tip-content">
+          <h2 class="tip-number section-subtitle">3. Lleva siempre efectivo.</h2>
+          <p class="body-text">
+            Aunque Tokio es una ciudad muy moderna, muchos establecimientos
+            pequeños como restaurantes locales, templos, máquinas expendedoras o
+            tiendas de barrio siguen funcionando principalmente con dinero en
+            efectivo. Es recomendable llevar yenes japoneses desde el inicio del
+            viaje o sacar dinero en cajeros de confianza como los de tiendas 7-Eleven
+            o FamilyMart, que suelen aceptar tarjetas internacionales sin problema.
+          </p>
+        </div>
+        <div class="tip-img">
+          <img src="https://images.unsplash.com/photo-1616077167555-51f6bc516dfa?w=400&q=80" alt="Yenes japoneses" />
+        </div>
+      </article>
 
-  <script src="js/script.js"></script>
+      <!-- 4 -->
+      <article class="tip-item tip-text-only">
+        <h2 class="tip-number section-subtitle">4. Elige bien tu alojamiento.</h2>
+        <p class="body-text">
+          Alojarse en barrios bien conectados como Shinjuku, Shibuya o Asakusa puede marcar
+          una gran diferencia en el viaje. Estas zonas no solo están muy bien comunicadas,
+          sino que también ofrecen restaurantes, tiendas y atracciones turísticas cerca,
+          lo que te ahorrará mucho tiempo en desplazamientos diarios.
+        </p>
+        <div class="tip-img-double">
+          <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=500&q=80" alt="Shinjuku" />
+          <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=500&q=80" alt="Tokio aéreo" />
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="tip-item tip-text-only">
+        <h2 class="tip-number section-subtitle">5. Respeta las normas sociales y culturales.</h2>
+        <p class="body-text">
+          En Japón el comportamiento en público es muy importante. Es habitual hablar en voz
+          baja en el transporte, respetar las colas y evitar conductas que puedan molestar a
+          los demás. Estas normas no están pensadas para turistas, pero seguirlas es clave para
+          integrarse bien y evitar situaciones incómodas.
+        </p>
+      </article>
+
+      <!-- 6 -->
+      <article class="tip-item tip-with-img">
+        <div class="tip-content">
+          <h2 class="tip-number section-subtitle">6. Prueba la gastronomía local.</h2>
+          <p class="body-text">
+            Tokio es considerada una de las mejores ciudades del mundo para comer
+            y cuenta con una oferta gastronómica enorme, desde pequeños
+            restaurantes tradicionales hasta locales con estrellas Michelin. Una
+            de las mejores partes del viaje es descubrir la comida japonesa
+            auténtica, mucho más variada de lo que normalmente se conoce fuera de
+            Japón. Además de platos famosos como el sushi o el ramen, también
+            merece la pena probar especialidades como el yakitori, el tonkatsu,
+            el udon o el curry japonés.
+          </p>
+        </div>
+        <div class="tip-img">
+          <img src="https://images.unsplash.com/photo-1617196034183-421b4040ed20?w=400&q=80" alt="Gastronomía japonesa" />
+        </div>
+      </article>
+
+      <!-- 7 -->
+      <article class="tip-item tip-text-only">
+        <h2 class="tip-number section-subtitle">7. Organiza el viaje, pero deja espacio para improvisar.</h2>
+        <p class="body-text">
+          Es recomendable tener un itinerario básico para no perderte lo más importante, pero
+          Tokio es una ciudad enorme y sorprendente, donde muchos de los mejores momentos
+          aparecen simplemente explorando barrios sin un plan fijo.
+        </p>
+        <div class="tip-img-full">
+          <img src="https://images.unsplash.com/photo-1481833761820-0509d3217039?w=1200&q=80" alt="Skyline Tokio" />
+        </div>
+      </article>
+
+    </div><!-- /tips-list -->
+
+  </main>
+
+  <footer id="mainFooter"></footer>
+
+  <script src="js/components.js"></script>
 </body>
-
-<footer class="site-footer">
-  <span>東京</span>
-</footer>
 </html>

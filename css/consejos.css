@@ -1,0 +1,189 @@
+/* ============================================
+   CONSEJOS — consejos.css
+   ============================================ */
+
+.page-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 48px 40px;
+}
+
+/* ── Cabecera ── */
+.consejos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.consejos-header-left {
+  flex: 1;
+}
+
+.consejos-header-left .page-title {
+  margin-bottom: 20px;
+}
+
+.consejos-kanjis {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.consejos-kanjis span {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  color: var(--rojo);
+  opacity: 0.15;
+  line-height: 1;
+}
+
+/* ── Franja roja divisora ── */
+.red-strip {
+  position: relative;
+  height: 80px;
+  overflow: hidden;
+  margin: 0 -48px 48px;
+}
+
+.red-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+}
+
+.red-strip-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(237,39,14,0.55);
+}
+
+/* ── Lista de consejos ── */
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.tip-item {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tip-item:last-child {
+  border-bottom: none;
+}
+
+.tip-number {
+  margin-bottom: 12px;
+}
+
+/* Consejo con imagen al lado */
+.tip-with-img {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.tip-content {
+  flex: 1;
+}
+
+.tip-img {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.tip-img img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Consejo con imagen doble */
+.tip-img-double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.tip-img-double img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Imagen full-width para el último consejo */
+.tip-img-full {
+  margin-top: 20px;
+}
+
+.tip-img-full img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ============================================
+   RESPONSIVE — CONSEJOS
+   ============================================ */
+
+@media (max-width: 900px) {
+  .page-wrapper {
+    padding: 40px 28px 30px;
+  }
+
+  .red-strip {
+    margin: 0 -28px 40px;
+  }
+
+  .tip-with-img {
+    flex-direction: column;
+  }
+
+  .tip-img {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .tip-img img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-wrapper {
+    padding: 28px 20px 24px;
+  }
+
+  .red-strip {
+    margin: 0 -20px 32px;
+    height: 60px;
+  }
+
+  .consejos-kanjis span {
+    font-size: 2rem;
+  }
+
+  .tip-img-double {
+    grid-template-columns: 1fr;
+  }
+
+  .tip-img-double img {
+    height: 180px;
+  }
+
+  .tip-img-full img {
+    height: 160px;
+  }
+}
