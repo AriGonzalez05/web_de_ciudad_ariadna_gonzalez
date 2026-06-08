@@ -1,71 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tokio</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>東京 · Tokio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body data-page="home">
 
-  <body>
-    <!--NAV-->
-    <nav class="menu">
-      <a href="visitas.html">VISITAS</a>
-      <a href="transporte.html">LOCALIZACIÓN Y TRANSPORTE</a>
-      <a href="gastronomia.html">GASTRONOMÍA</a>
-      <a href="clima.html">CLIMA</a>
-      <a href="consejos.html">CONSEJOS</a>
-    </nav>
+  <nav id="mainNav"></nav>
+  <div id="mobileMenu" class="mobile-menu"></div>
+  <div id="overlayBg" class="overlay-bg"></div>
 
-    <!--TEXTO INICIAL-->
-    <section class="intro">
-      <p>
-        Una ciudad que respira ritmo, belleza y movimiento, capaz de
-        sorprenderte incluso cuando crees haberla entendido.
+  <section class="hero">
+
+    <div class="hero-intro">
+      <p class="body-text">
+        Una ciudad que respira ritmo, belleza y movimiento, capaz<br>
+        de sorprenderte incluso cuando crees haberla entendido.
       </p>
-      <p>Tokio no se visita: se vive.</p>
-    </section>
+      <p class="body-text hero-tagline">Tokio no se visita: se vive.</p>
+    </div>
 
-    <!--CARRUSEL-->
-    <section class="carousel">
-      <div class="slides">
-        <img src="media/carruselhome.jpg/TOKYO 1.webp" alt="Tokio" />
-        <img src="media/carruselhome.jpg/TOKYO 2.webp" alt="Tokio" />
-        <img src="media/carruselhome.jpg/TOKYO 3.webp" alt="Tokio" />
-        <img src="media/carruselhome.jpg/TOKYO 5.webp" alt="Tokio" />
-        <img src="media/carruselhome.jpg/TOKYO 6.webp" alt="Tokio" />
-        <img src="media/carruselhome.jpg/TOKYO 7.webp" alt="Tokio" />
-        <img src="media/carruselhome.jpg/TOKYO 8.webp" alt="Tokio" />
-      </div>
-    </section>
+    <div class="hero-kanjis" aria-hidden="true">
+      <span>東</span>
+      <span>京</span>
+      <span>東</span>
+      <span>東</span>
+      <span>京</span>
+    </div>
 
-    <!--BLOQUE TOKIO + KANJIS ENCIMA DE LA IMAGEN-->
-    <div class="overlay">
-      <div>
-        <h1 class="tokio-title">TOKIO</h1>
+    <div class="hero-carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=80" alt="Tokio ciudad" />
+        <img src="https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=1200&q=80" alt="Asakusa" />
+        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1200&q=80" alt="Shibuya" />
+        <img src="https://images.unsplash.com/photo-1480796927426-f609979314bd?w=1200&q=80" alt="Tokio nocturno" />
+        <img src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=1200&q=80" alt="Templo Tokio" />
       </div>
 
-      <div class="kanjis-group">
-        <div class="kanjis izquierda">
-          <span>東</span>
-          <span>京</span>
-          <span>へ</span>
-        </div>
+      <div class="hero-title-overlay">
+        <span class="hero-tokio">TOKIO</span>
+      </div>
 
-        <div class="kanjis derecha">
-          <span>よ</span>
-          <span>う</span>
-          <span>こ</span>
-          <span>そ</span>
-        </div>
+      <div class="carousel-kanjis" aria-hidden="true">
+        <span>東</span>
+        <span>京</span>
+        <span>東</span>
+        <span>東</span>
+        <span>京</span>
       </div>
     </div>
 
-    <!--JS-->
-    <script src="js/script.js"></script>
-  </body>
+  </section>
 
-  <footer class="site-footer">
-    <span>東京</span>
-  </footer>
+  <footer id="mainFooter"></footer>
+
+  <script src="js/components.js"></script>
+  <script src="js/carousel.js"></script>
+</body>
 </html>
