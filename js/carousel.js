@@ -2,25 +2,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const track = document.getElementById('carouselTrack');
   if (!track) return;
 
-  const imgs = track.querySelectorAll('img');
+  const imgs = Array.from(track.querySelectorAll('img'));
+  if (imgs.length === 0) return;
+
   let current = 0;
 
-  // Mostramos solo la img activa
   imgs.forEach((img, i) => {
-    img.style.position   = i === 0 ? 'relative' : 'absolute';
-    img.style.top        = '0';
-    img.style.left       = '0';
-    img.style.opacity    = i === 0 ? '1' : '0';
-    img.style.transition = 'opacity 0.15s ease';
+    img.style.position = 'absolute';
+    img.style.top      = '0';
+    img.style.left     = '0';
+    img.style.width    = '100%';
+    img.style.height   = '100%';
+    img.style.objectFit = 'cover';
+    img.style.opacity  = i === 0 ? '1' : '0';
+    img.style.transition = 'opacity 0.4s ease';
   });
 
-  // Cambio rápido, efecto gif
   setInterval(() => {
     imgs[current].style.opacity = '0';
-    imgs[current].style.position = 'absolute';
     current = (current + 1) % imgs.length;
-    imgs[current].style.position = 'relative';
     imgs[current].style.opacity = '1';
-  }, 1800);
+  }, 2000);
 });
-
