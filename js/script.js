@@ -64,7 +64,6 @@ $(function () {
     });
   }
 
-  // Elemento arrastrable
   if ($("#draggable").length > 0) {
     $("#draggable").draggable();
   }
