@@ -1,4 +1,3 @@
-
 (function () {
   const pages = [
     { label: '東京',                     href: 'index.html',       key: 'home' },
@@ -30,7 +29,6 @@
     `;
   }
 
-  /* MENU HAM*/
   const mobileMenuEl = document.getElementById('mobileMenu');
   if (mobileMenuEl) {
     mobileMenuEl.innerHTML = `
@@ -59,7 +57,6 @@
     `;
   }
 
-  /* MOBILE MENU INTERACCIÓN */
   document.addEventListener('DOMContentLoaded', () => {
     const hamburger  = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');

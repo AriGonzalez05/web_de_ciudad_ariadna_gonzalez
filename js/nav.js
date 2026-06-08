@@ -1,3 +1,7 @@
+
+document.addEventListener('DOMContentLoaded', () => {
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
   const currentFile = window.location.pathname.split('/').pop() || 'index.html';
@@ -7,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.add('active');
     }
   });
+
+  /* Menú hamburguesa */
   const hamburger   = document.getElementById('hamburger');
   const mobileMenu  = document.getElementById('mobileMenu');
   const overlayBg   = document.getElementById('overlayBg');
@@ -27,4 +33,5 @@ document.addEventListener('DOMContentLoaded', () => {
   if (hamburger) hamburger.addEventListener('click', openMenu);
   if (closeMenu) closeMenu.addEventListener('click', closeMobileMenu);
   if (overlayBg) overlayBg.addEventListener('click', closeMobileMenu);
+}); 
 });
