@@ -1,235 +1,238 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tokio</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>東京 · Visitas</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/visitas.css" />
+</head>
+<body data-page="visitas">
 
-  <body>
-    <!-- NAV -->
-    <nav class="menu">
-      <a href="visitas.html">VISITAS</a>
-      <a href="transporte.html">LOCALIZACIÓN Y TRANSPORTE</a>
-      <a href="gastronomia.html">GASTRONOMÍA</a>
-      <a href="clima.html">CLIMA</a>
-      <a href="consejos.html">CONSEJOS</a>
-    </nav>
+  <nav id="mainNav"></nav>
+  <div id="mobileMenu" class="mobile-menu"></div>
+  <div id="overlayBg" class="overlay-bg"></div>
 
-    <div><h2>VISITAS</h2></div>
-    <p class="description">
-      Tokio es una ciudad llena de contrastes, donde cada barrio tiene una
-      personalidad propia y cada rincón guarda una sorpresa. Desde templos
-      ancestrales hasta avenidas iluminadas por neones, la capital japonesa
-      ofrece una mezcla única de tradición y modernidad. Estos son algunos de
-      los lugares que no puedes perderte si quieres sentir la esencia auténtica
-      de Tokio.
-    </p>
+  <main class="page-wrapper">
 
-    <!-- Accordion -->
-    <div id="accordion">
-      <h3>LUGARES ICÓNICOS</h3>
-      <div class="places">
-        <div class="lugar">
-          <img
-            class="place-image"
-            src="media/visitas.jpg/lugaresiconicos1.jpg"
-            alt="Shibuya Crossing"
-          />
-          <div class="texto-lugar">
-            <h4>Shibuya Crossing</h4>
-            <p class="content">
-              El cruce peatonal más famoso del mundo. Miles de personas lo
-              atraviesan cada hora entre neones, pantallas gigantes y el ritmo
-              frenético de la ciudad. Es la mejor forma de sentir la energía
-              pura de Tokio.
-            </p>
-          </div>
-        </div>
-        <div class="lugar">
-          <img
-            class="place-image"
-            src="media/visitas.jpg/lugaresiconicos2.jpg"
-            alt="Shibuya Crossing"
-          />
-          <div class="texto-lugar">
-            <h4>Senso-ji (Asakusa)</h4>
-            <p class="content">
-              El templo más antiguo de Tokio, cargado de historia y simbolismo.
-              Su puerta roja, sus linternas gigantes y la calle comercial
-              Nakamise crean uno de los ambientes más auténticos de la ciudad.
-            </p>
-          </div>
-        </div>
-        <div class="lugar">
-          <img
-            class="place-image"
-            src="media/visitas.jpg/lugaresiconicos3.png"
-            alt="Shibuya Crossing"
-          />
-          <div class="texto-lugar">
-            <h4>Torre de Tokio</h4>
-            <p class="content">
-              Inspirada en la Torre Eiffel, es uno de los símbolos más
-              reconocibles de Tokio. Desde su mirador disfrutarás de una
-              panorámica espectacular, especialmente al atardecer cuando la
-              ciudad se ilumina.
-            </p>
-          </div>
-        </div>
-        <div class="lugar">
-          <img
-            class="place-image"
-            src="media/visitas.jpg/lugaresiconicos4.jpg"
-            alt="Shibuya Crossing"
-          />
-          <div class="texto-lugar">
-            <h4>Shinjuku Gyoen</h4>
-            <p class="content">
-              Un oasis verde en pleno corazón de la ciudad. Jardines japoneses,
-              invernaderos y amplias zonas abiertas lo convierten en un lugar
-              perfecto para desconectar del ritmo urbano.
-            </p>
-          </div>
-        </div>
+    <div class="page-header">
+      <div class="page-header-left">
+        <h1 class="page-title">VISITAS</h1>
+        <p class="body-text page-intro">
+          Tokio es una ciudad llena de contrastes, donde cada barrio tiene
+          una personalidad propia y cada rincón guarda una sorpresa. Desde
+          templos ancestrales hasta avenidas iluminadas por neones, la
+          capital japonesa ofrece una mezcla única de tradición y modernidad.
+          Estos son algunos de los lugares que no puedes perderte si quieres
+          sentir la esencia auténtica de Tokio.
+        </p>
       </div>
-      <h3>BARRIOS DESTACADOS</h3>
-      <div class="places">
-        <div class="lugar">
-          <img
-            class="place-image"
-            src="media/visitas.jpg/lugaresiconicos1.jpg"
-            alt="Shibuya Crossing"
-          />
-          <div class="texto-lugar">
-            <h4>Shibuya Crossing</h4>
-            <p class="content">
-              El cruce peatonal más famoso del mundo. Miles de personas lo
-              atraviesan cada hora entre neones, pantallas gigantes y el ritmo
-              frenético de la ciudad. Es la mejor forma de sentir la energía
-              pura de Tokio.
-            </p>
-          </div>
-        </div>
-        <div class="lugar">
-          <img
-            class="place-image"
-            src="media/visitas.jpg/lugaresiconicos2.jpg"
-            alt="Shibuya Crossing"
-          />
-          <div class="texto-lugar">
-            <h4>Senso-ji (Asakusa)</h4>
-            <p class="content">
-              El templo más antiguo de Tokio, cargado de historia y simbolismo.
-              Su puerta roja, sus linternas gigantes y la calle comercial
-              Nakamise crean uno de los ambientes más auténticos de la ciudad.
-            </p>
-          </div>
-        </div>
-        <div class="lugar">
-          <img
-            class="place-image"
-            src="media/visitas.jpg/lugaresiconicos3.png"
-            alt="Shibuya Crossing"
-          />
-          <div class="texto-lugar">
-            <h4>Torre de Tokio</h4>
-            <p class="content">
-              Inspirada en la Torre Eiffel, es uno de los símbolos más
-              reconocibles de Tokio. Desde su mirador disfrutarás de una
-              panorámica espectacular, especialmente al atardecer cuando la
-              ciudad se ilumina.
-            </p>
-          </div>
-        </div>
-        <div class="lugar">
-          <img
-            class="place-image"
-            src="media/visitas.jpg/lugaresiconicos4.jpg"
-            alt="Shibuya Crossing"
-          />
-          <div class="texto-lugar">
-            <h4>Shinjuku Gyoen</h4>
-            <p class="content">
-              Un oasis verde en pleno corazón de la ciudad. Jardines japoneses,
-              invernaderos y amplias zonas abiertas lo convierten en un lugar
-              perfecto para desconectar del ritmo urbano.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <h3>ACTIVIDADES CULTURALES</h3>
-      <div class="places">
-        <div class="lugar">
-          <img
-            class="place-image"
-            src="media/visitas.jpg/lugaresiconicos1.jpg"
-            alt="Shibuya Crossing"
-          />
-          <div class="texto-lugar">
-            <h4>Shibuya Crossing</h4>
-            <p class="content">
-              El cruce peatonal más famoso del mundo. Miles de personas lo
-              atraviesan cada hora entre neones, pantallas gigantes y el ritmo
-              frenético de la ciudad. Es la mejor forma de sentir la energía
-              pura de Tokio.
-            </p>
-          </div>
-        </div>
-        <div class="lugar">
-          <img
-            class="place-image"
-            src="media/visitas.jpg/lugaresiconicos2.jpg"
-            alt="Shibuya Crossing"
-          />
-          <div class="texto-lugar">
-            <h4>Senso-ji (Asakusa)</h4>
-            <p class="content">
-              El templo más antiguo de Tokio, cargado de historia y simbolismo.
-              Su puerta roja, sus linternas gigantes y la calle comercial
-              Nakamise crean uno de los ambientes más auténticos de la ciudad.
-            </p>
-          </div>
-        </div>
-        <div class="lugar">
-          <img
-            class="place-image"
-            src="media/visitas.jpg/lugaresiconicos3.png"
-            alt="Shibuya Crossing"
-          />
-          <div class="texto-lugar">
-            <h4>Torre de Tokio</h4>
-            <p class="content">
-              Inspirada en la Torre Eiffel, es uno de los símbolos más
-              reconocibles de Tokio. Desde su mirador disfrutarás de una
-              panorámica espectacular, especialmente al atardecer cuando la
-              ciudad se ilumina.
-            </p>
-          </div>
-        </div>
-        <div class="lugar">
-          <img
-            class="place-image"
-            src="media/visitas.jpg/lugaresiconicos4.jpg"
-            alt="Shibuya Crossing"
-          />
-          <div class="texto-lugar">
-            <h4>Shinjuku Gyoen</h4>
-            <p class="content">
-              Un oasis verde en pleno corazón de la ciudad. Jardines japoneses,
-              invernaderos y amplias zonas abiertas lo convierten en un lugar
-              perfecto para desconectar del ritmo urbano.
-            </p>
-          </div>
-        </div>
+      <div class="page-header-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Tokyo_Metro_stamp.svg/800px-Tokyo_Metro_stamp.svg.png"
+             alt="Sello Tokio" />
       </div>
     </div>
 
-    <!-- Scripts al final -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+    <div class="accordion-list">
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" data-target="lugares-iconicos">
+          <span>Lugares Icónicos</span>
+          <span class="accordion-arrow">&#8964;</span>
+        </button>
+        <div class="accordion-content" id="lugares-iconicos">
+          <div class="places-grid">
+
+            <div class="place-card">
+              <img src="https://images.unsplash.com/photo-1570521462033-3015e76e7432?w=400&q=80" alt="Senso-ji" />
+              <div class="place-info">
+                <h3 class="place-name">Senso-ji (Asakusa)</h3>
+                <p class="body-text">
+                  El templo más antiguo y visitado de Tokio, fundado en el año 628. La
+                  imponente puerta Kaminarimon da paso a la calle Nakamise, llena de
+                  tiendas tradicionales. Un lugar donde la historia se palpa en cada
+                  piedra.
+                </p>
+              </div>
+            </div>
+
+            <div class="place-card">
+              <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=400&q=80" alt="Shibuya Crossing" />
+              <div class="place-info">
+                <h3 class="place-name">Cruce de Shibuya</h3>
+                <p class="body-text">
+                  El cruce peatonal más famoso del mundo. Miles de personas lo
+                  atraviesan cada hora entre neones, pantallas gigantes y el
+                  ritmo frenético de la ciudad. Es la mejor forma de sentir la
+                  energía pura de Tokio.
+                </p>
+              </div>
+            </div>
+
+            <div class="place-card">
+              <img src="https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=400&q=80" alt="Meiji Shrine" />
+              <div class="place-info">
+                <h3 class="place-name">Santuario Meiji</h3>
+                <p class="body-text">
+                  Un remanso de paz en pleno corazón de la ciudad, rodeado de un
+                  frondoso bosque artificial. Dedicado al emperador Meiji, es uno
+                  de los santuarios sintoístas más importantes de Japón.
+                </p>
+              </div>
+            </div>
+
+            <div class="place-card">
+              <img src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=400&q=80" alt="Tokyo Tower" />
+              <div class="place-info">
+                <h3 class="place-name">Torre de Tokio</h3>
+                <p class="body-text">
+                  Icono inconfundible del skyline de Tokio, inspirada en la Torre
+                  Eiffel pero pintada de naranja y blanco. Desde su mirador se
+                  obtienen vistas espectaculares de toda la ciudad y, en días
+                  despejados, del Monte Fuji.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" data-target="barrios">
+          <span>Barrios Destacados</span>
+          <span class="accordion-arrow">&#8964;</span>
+        </button>
+        <div class="accordion-content" id="barrios">
+          <div class="places-grid">
+
+            <div class="place-card">
+              <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=400&q=80" alt="Shinjuku" />
+              <div class="place-info">
+                <h3 class="place-name">Shinjuku</h3>
+                <p class="body-text">
+                  El barrio más animado de Tokio. De día, rascacielos de cristal y
+                  los famosos jardines Gyoen. De noche, el Kabukichō llena las
+                  calles de luces de neón, izakayas y entretenimiento sin límite.
+                </p>
+              </div>
+            </div>
+
+            <div class="place-card">
+              <img src="https://images.unsplash.com/photo-1554797589-7241bb691973?w=400&q=80" alt="Harajuku" />
+              <div class="place-info">
+                <h3 class="place-name">Harajuku</h3>
+                <p class="body-text">
+                  Epicentro de la moda alternativa y la cultura pop japonesa.
+                  La calle Takeshita es famosa por sus tiendas únicas, crepes
+                  coloridos y la explosiva subcultura kawaii que ha conquistado
+                  el mundo entero.
+                </p>
+              </div>
+            </div>
+
+            <div class="place-card">
+              <img src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=400&q=80" alt="Asakusa" />
+              <div class="place-info">
+                <h3 class="place-name">Asakusa</h3>
+                <p class="body-text">
+                  El barrio más tradicional de Tokio, donde el Japón antiguo
+                  sobrevive entre calles adoquinadas, tiendas de artesanía y
+                  rickshaws. Perfecto para entender cómo era la ciudad antes de
+                  la modernidad.
+                </p>
+              </div>
+            </div>
+
+            <div class="place-card">
+              <img src="https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?w=400&q=80" alt="Akihabara" />
+              <div class="place-info">
+                <h3 class="place-name">Akihabara</h3>
+                <p class="body-text">
+                  El paraíso de la tecnología, el anime y la cultura otaku.
+                  Tiendas de electrónica apiladas en varios pisos, figuras
+                  coleccionables, maid cafés y arcades que te transportan a
+                  un universo completamente diferente.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" data-target="naturaleza">
+          <span>Naturaleza y Parques</span>
+          <span class="accordion-arrow">&#8964;</span>
+        </button>
+        <div class="accordion-content" id="naturaleza">
+          <div class="places-grid">
+
+            <div class="place-card">
+              <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?w=400&q=80" alt="Parque Ueno" />
+              <div class="place-info">
+                <h3 class="place-name">Parque Ueno</h3>
+                <p class="body-text">
+                  El parque más famoso de Tokio, especialmente durante la
+                  floración del sakura. Alberga también el zoo más antiguo
+                  de Japón y varios museos nacionales que merecen una visita.
+                </p>
+              </div>
+            </div>
+
+            <div class="place-card">
+              <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=400&q=80" alt="Jardines Shinjuku" />
+              <div class="place-info">
+                <h3 class="place-name">Jardines Shinjuku Gyoen</h3>
+                <p class="body-text">
+                  Un refugio verde en medio del caos urbano. Más de 1.000
+                  cerezos hacen de este jardín uno de los mejores lugares
+                  para el hanami en toda la ciudad. Abierto durante todo
+                  el año con paisajes cambiantes.
+                </p>
+              </div>
+            </div>
+
+            <div class="place-card">
+              <img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=400&q=80" alt="Monte Fuji" />
+              <div class="place-info">
+                <h3 class="place-name">Monte Fuji (excursión)</h3>
+                <p class="body-text">
+                  A solo 100 km de Tokio, el símbolo por excelencia de Japón.
+                  Se puede visitar en una excursión de día desde la capital.
+                  El lago Kawaguchiko ofrece las vistas más fotogénicas del
+                  volcán sagrado.
+                </p>
+              </div>
+            </div>
+
+            <div class="place-card">
+              <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400&q=80" alt="Odaiba" />
+              <div class="place-info">
+                <h3 class="place-name">Odaiba</h3>
+                <p class="body-text">
+                  Isla artificial en la Bahía de Tokio con vistas al Rainbow
+                  Bridge y el skyline de la ciudad. Combina centros comerciales
+                  futuristas, playas artificiales y museos interactivos en un
+                  entorno único.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer id="mainFooter"></footer>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/visitas.js"></script>
+</body>
 </html>
